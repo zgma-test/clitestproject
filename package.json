@@ -1,0 +1,10 @@
+{
+  "name": "CLITestProject",
+  "version": "1.0.0",
+  "dependencies": {
+    "json-validity": "1.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "2.644.0"
+  }
+}

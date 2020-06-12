@@ -1,0 +1,183 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "2279ae02-14dc-4633-b320-63ee20717376": {
+        "id": "2279ae02-14dc-4633-b320-63ee20717376",
+        "parent": null,
+        "name": "CLITestNodeLambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "CLITestNodeLambda.js",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "CLITestNodeLambda"
+        },
+        "triggers": [
+          {
+            "resourceName": "httpApigusEast1MyEventAPI",
+            "config": {
+              "defaultRoute": false,
+              "method": "POST",
+              "route": "/validate"
+            }
+          }
+        ],
+        "testCases": {
+          "ecd7a121-8844-4c55-9d92-f74fd9005d1c": {
+            "id": "ecd7a121-8844-4c55-9d92-f74fd9005d1c",
+            "name": "Test Person",
+            "functionId": "2279ae02-14dc-4633-b320-63ee20717376",
+            "event": "{\n    \"name\": \"John\",\n    \"age\": 42,\n    \"gender\": \"M\"\n}",
+            "eventTemplate": "hello-world"
+          },
+          "1eb068a2-f490-481c-b52f-88b3e4c5919e": {
+            "id": "1eb068a2-f490-481c-b52f-88b3e4c5919e",
+            "name": "Copy of Test Person Fail",
+            "functionId": "2279ae02-14dc-4633-b320-63ee20717376",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "2d1114fc-d2df-4437-87e0-41efbf179ecd": {
+        "id": "2d1114fc-d2df-4437-87e0-41efbf179ecd",
+        "parent": null,
+        "name": "CLITestPyLambda.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "CLITestPyLambda.py",
+        "cursor": {
+          "lineNumber": 8,
+          "column": 23
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "CLITestPyLambda"
+        },
+        "triggers": [
+          {
+            "resourceName": "httpApigusEast1MyEventAPI",
+            "config": {
+              "defaultRoute": false,
+              "method": "GET",
+              "route": "/time"
+            }
+          }
+        ],
+        "testCases": {
+          "e9fc0c88-2a16-45df-8e19-05d6b2879ef5": {
+            "id": "e9fc0c88-2a16-45df-8e19-05d6b2879ef5",
+            "name": "Test event",
+            "functionId": "2d1114fc-d2df-4437-87e0-41efbf179ecd",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "2279ae02-14dc-4633-b320-63ee20717376",
+      "2d1114fc-d2df-4437-87e0-41efbf179ecd"
+    ],
+    "currentFileId": "2d1114fc-d2df-4437-87e0-41efbf179ecd",
+    "resources": {
+      "httpApigusEast1MyEventAPI": {
+        "name": "httpApigusEast1MyEventAPI",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiType": 2,
+          "mode": 0,
+          "apiName": "MyEventAPI",
+          "stageName": "test"
+        }
+      },
+      "snsusEast1MyNotificationTopic": {
+        "name": "snsusEast1MyNotificationTopic",
+        "type": "SNS",
+        "config": {
+          "topicMode": 0,
+          "topicName": "MyNotificationTopic",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:MyNotificationTopic",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "topicDisplayName": "My notifications",
+          "subscriptions": []
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "json-validity": {
+          "name": "json-validity",
+          "version": "1.0.0",
+          "dev": false,
+          "language": "nodejs"
+        },
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
+        },
+        "pendulum": {
+          "name": "pendulum",
+          "version": "2.1.0",
+          "dev": false,
+          "language": "python"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "CLITestProject",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1591954199217,
+    "sigmaVersion": "1.3.27"
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "clitestproject",
+      "url": "https://github.com/zgma-test/clitestproject"
+    }
+  }
+}
