@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "CLITestNodeLambda.js",
         "cursor": {
-          "lineNumber": 1,
-          "column": 1
+          "lineNumber": 33,
+          "column": 10
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -95,7 +95,7 @@
       "2279ae02-14dc-4633-b320-63ee20717376",
       "2d1114fc-d2df-4437-87e0-41efbf179ecd"
     ],
-    "currentFileId": "2d1114fc-d2df-4437-87e0-41efbf179ecd",
+    "currentFileId": "2279ae02-14dc-4633-b320-63ee20717376",
     "resources": {
       "httpApigusEast1MyEventAPI": {
         "name": "httpApigusEast1MyEventAPI",
@@ -114,10 +114,10 @@
         "config": {
           "topicMode": 0,
           "topicName": "MyNotificationTopic",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:MyNotificationTopic",
+          "topicArn": "arn:aws:sns:us-east-1:CUR_AWS_ACCOUNT:MyNotificationTopic",
           "topicRegion": "us-east-1",
           "snsType": 0,
-          "topicDisplayName": "My notifications",
+          "topicDisplayName": "Notifications",
           "subscriptions": []
         }
       }
@@ -125,7 +125,7 @@
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -163,6 +163,7 @@
     }
   },
   "PROJECT_META": {
+    "sigmaVersion": "1.3.27",
     "projectName": "CLITestProject",
     "projectDescription": "",
     "projectVersion": "1.0.0",
@@ -170,8 +171,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1591954199217,
-    "sigmaVersion": "1.3.27"
+    "lastSave": 1592564265716
   },
   "VCS_STATE": {
     "provider": "GitHub",

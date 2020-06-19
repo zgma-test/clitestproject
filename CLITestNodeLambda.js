@@ -20,7 +20,7 @@ exports.handler = async (event) => {
             let data = await sns.publish({
                 Message: JSON.stringify(event),
                 Subject: "Validation Passed",
-                TopicArn: "arn:aws:sns:us-east-1:318300609668:MyNotificationTopic",
+                TopicArn: `arn:aws:sns:us-east-1:${process.env.SIGMA_AWS_ACC_ID}:MyNotificationTopic`,
                 MessageStructure: "String",
                 MessageAttributes: {}
             }).promise();
@@ -30,8 +30,7 @@ exports.handler = async (event) => {
         } catch (err) {
             console.log("Failed to publish notification", err);
             notificationSent = false;
-        };
-
+        }
     }
     return { valid: validEvent, notification: notificationSent }
 };
