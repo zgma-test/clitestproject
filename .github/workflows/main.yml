@@ -21,6 +21,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    # Set permissions to global node_modules directory
+    - name: Set permissions to node_modules directory
+      run: sudo chown -R $USER /usr/local/lib/node_modules
 
     # Installs Sigma CLI
     - name: Install Sigma CLI
