@@ -23,16 +23,16 @@ jobs:
     - uses: actions/checkout@v2
     
     # Set permissions to global node_modules directory
-    - name: Set permissions to global node directories
-      run: |
-        sudo chown -R $USER /usr/local/lib/node_modules
-        ls -l /usr/local/lib/node_modules
-        sudo chown -R $USER /usr/local/bin
-        ls -l /usr/local/bin
+#     - name: Set permissions to global node directories
+#       run: |
+#         sudo chown -R $USER /usr/local/lib/node_modules
+#         ls -l /usr/local/lib/node_modules
+#         sudo chown -R $USER /usr/local/bin
+#         ls -l /usr/local/bin
 
     # Installs Sigma CLI
     - name: Install Sigma CLI
-      run: npm i slappforge-sigma-cli -g
+      run: sudo npm i slappforge-sigma-cli -g
     
     - name: Build Project
       run: sigma build
