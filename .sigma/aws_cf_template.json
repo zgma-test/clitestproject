@@ -9,6 +9,10 @@
     "lambdaCodeKeyParameter": {
       "Type": "String",
       "Description": "S3 key of the Lambda deployment package"
+    },
+    "envVarMySecretVarCLITestNodeLambdaParameter": {
+      "Type": "String",
+      "Description": "Value of the environment variable: MySecretVar, for Lambda: CLITestNodeLambda"
     }
   },
   "Outputs": {
@@ -132,6 +136,10 @@
         },
         "Environment": {
           "Variables": {
+            "MyVar": "Hello Node",
+            "MySecretVar": {
+              "Ref": "envVarMySecretVarCLITestNodeLambdaParameter"
+            },
             "SIGMA_AWS_ACC_ID": {
               "Ref": "AWS::AccountId"
             }
@@ -274,6 +282,7 @@
         },
         "Environment": {
           "Variables": {
+            "MyVar": "Hello Python",
             "SIGMA_AWS_ACC_ID": {
               "Ref": "AWS::AccountId"
             }

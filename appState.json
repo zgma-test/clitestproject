@@ -136,6 +136,30 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "2279ae02-14dc-4633-b320-63ee20717376",
+        "varKey": "MyVar",
+        "varValue": "Hello Node",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "2d1114fc-d2df-4437-87e0-41efbf179ecd",
+        "varKey": "MyVar",
+        "varValue": "Hello Python",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "2279ae02-14dc-4633-b320-63ee20717376",
+        "varKey": "MySecretVar",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
@@ -163,7 +187,7 @@
     }
   },
   "PROJECT_META": {
-    "sigmaVersion": "1.3.27",
+    "sigmaVersion": "1.4.1",
     "projectName": "CLITestProject",
     "projectDescription": "",
     "projectVersion": "1.0.0",
@@ -171,7 +195,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1592564265716
+    "lastSave": 1593770983103
   },
   "VCS_STATE": {
     "provider": "GitHub",
