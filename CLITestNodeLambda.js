@@ -19,7 +19,7 @@ exports.handler = async (event) => {
         try {
             let data = await sns.publish({
                 Message: JSON.stringify(event),
-                Subject: "Validation Passed",
+                Subject: "Validation Passed!",
                 TopicArn: `arn:aws:sns:us-east-1:${process.env.SIGMA_AWS_ACC_ID}:MyNotificationTopic`,
                 MessageStructure: "String",
                 MessageAttributes: {}

@@ -17,7 +17,7 @@
   },
   "Outputs": {
     "httpApigMyEventAPIRoutePOSTvalidate": {
-      "Description": "POST endpoint for route /validate on API MyEventAPI",
+      "Description": "URL of MyEventAPI/validate:POST endpoint",
       "Value": {
         "Fn::Join": [
           "",
@@ -27,7 +27,9 @@
               "Ref": "httpApigMyEventAPI"
             },
             ".execute-api.",
-            "us-east-1",
+            {
+              "Ref": "AWS::Region"
+            },
             ".amazonaws.com",
             "/test",
             "/validate"
@@ -36,7 +38,7 @@
       }
     },
     "httpApigMyEventAPIRouteGETtime": {
-      "Description": "GET endpoint for route /time on API MyEventAPI",
+      "Description": "URL of MyEventAPI/time:GET endpoint",
       "Value": {
         "Fn::Join": [
           "",
@@ -46,7 +48,9 @@
               "Ref": "httpApigMyEventAPI"
             },
             ".execute-api.",
-            "us-east-1",
+            {
+              "Ref": "AWS::Region"
+            },
             ".amazonaws.com",
             "/test",
             "/time"
@@ -54,10 +58,10 @@
         ]
       }
     },
-    "snsusEast1MyNotificationTopic": {
+    "snsMyNotificationTopic": {
       "Description": "ARN of SNS topic MyNotificationTopic",
       "Value": {
-        "Ref": "snsusEast1MyNotificationTopic"
+        "Ref": "snsMyNotificationTopic"
       }
     },
     "CLITestNodeLambda": {
@@ -99,7 +103,7 @@
         "AutoDeploy": true
       }
     },
-    "snsusEast1MyNotificationTopic": {
+    "snsMyNotificationTopic": {
       "Type": "AWS::SNS::Topic",
       "Properties": {
         "DisplayName": "Notifications",
@@ -181,7 +185,7 @@
                     "sns:Publish"
                   ],
                   "Resource": {
-                    "Ref": "snsusEast1MyNotificationTopic"
+                    "Ref": "snsMyNotificationTopic"
                   }
                 }
               ]
